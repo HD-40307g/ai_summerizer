@@ -31,7 +31,7 @@ AI Summarizer is a web application built using React, Redux, Vite, and Tailwind 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/ai-summarizer.git
+   git clone https://github.com/HD-40307g/ai-summarizer.git
    cd ai-summarizer
    ```
 
@@ -102,18 +102,26 @@ const handleSubmit = async (e) => {
 ## Folder Structure
 
 ```
+├── node_modules
+├── public
+│   └── favicon.ico
 ├── src
 │   ├── assets          # Static assets like images and icons
 │   ├── components      # Reusable UI components
 │   ├── services        # API services (Redux Toolkit `createApi`)
-│   ├── styles          # Tailwind CSS and other global styles
+│   ├── App.css         # Tailwind CSS and other global styles
 │   ├── App.jsx         # Main App component
-│   ├── index.js        # Entry point for React
-│   └── ...
+│   └── main.jsx        # Entry point for React
 ├── .env                # Environment variables
+├── .gitignore          #
+├── eslint.config.js    #
+├── index.html          #
+├── package-lock.json   #
 ├── package.json        # Project dependencies and scripts
-├── vite.config.js      # Vite configuration file
-└── ...
+├── postcss.config.js   #
+├── README.md           #
+├── tailwind.config.js  #
+└── vite.config.js      # Vite configuration file
 ```
 
 ## Future Improvements
