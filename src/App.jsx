@@ -1,6 +1,6 @@
 import React from 'react';
-import Hero from './components/Hero';
-import Demo from './components/Demo';
+import Header from './components/Header';
+import Summary from './components/Summary';
 import './App.css';
 
 const App = () => {
@@ -11,8 +11,8 @@ const App = () => {
       </div>
 
       <div className='app'>
-        <Hero />
-        <Demo />
+        <Header />
+        <Summary />
       </div>
     </main>
   )

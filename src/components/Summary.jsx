@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { copy, linkIcon, loader, tick} from '../assets';
 import { useLazyGetSummaryQuery } from "../services/article";
 
-const Demo = () => {
+const Summary = () => {
     const [article, setArticle] = useState({
         url: "",
         summary: "",
@@ -43,9 +43,9 @@ useEffect(() => {
     return (
         <section className="mt-16 w-full max-w-xl">
             <div className="flex flex-col w-full gap-2">
+{/*URL input form with submit button.*/}
                 <form className="relative flex justify-center items-center" onSubmit={handleSubmit}>
                     <img src={linkIcon} alt="link_icon" className="absolute left-0 my-2 ml-3 w-5"/>
-    
                     <input type="url" 
                         placeholder="Enter an URL" 
                         value={article.url} 
@@ -53,17 +53,12 @@ useEffect(() => {
                         required 
                         className="url_input peer">
                     </input>
-    
                     <button type="submit" className="submit_btn peer-focus:border-gray-700 peer-focus:text-gray-700">⏎</button>
                 </form>
-    
+{/*Copy button to copy URL*/}
                 <div className="flex flex-col gap-1 max-h-60 overflow-y-auto">
                     {allArticles.map((item, index) => (
-                        <div 
-                            key={`link-${index}`} 
-                            onClick={() => setArticle(item)} 
-                            className="link_card"
-                        >
+                        <div key={`link-${index}`} onClick={() => setArticle(item)} className="link_card">
                             <div className="copy_btn" onClick={() => handleCopy(item.url)}>
                                 <img src={copied === item.url ? tick : copy} alt="copy_icon" className="w-[40%] object-contain"/>
                             </div>
@@ -72,6 +67,7 @@ useEffect(() => {
                     ))} 
                 </div>
             </div>
+{/*Section to render loader icon, error message or article summary. */}
             <div className="my-10 max-w-full flex justify-center items-center">
                 {isFetching ? (
                     <img src={loader} alt="loader" className="w-20 h-20 object-contain" />
@@ -92,4 +88,4 @@ useEffect(() => {
     
 }
 
-export default Demo;
+export default Summary;
