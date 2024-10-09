@@ -67,7 +67,17 @@ The output will be in the `dist/` folder.
 
 ## Component Breakdown
 
-### `Demo` Component
+### `Header` Component
+
+This component is responsible for displaying the top section of the webpage. It contains a navigation bar with the app's logo and a GitHub button, followed by a main heading and a short description of the app's purpose. Key features:
+
+- **Logo**: The app's logo is displayed on the left side of the navigation bar. The logo is imported from the assets directory.
+- **GitHub Button**: A button on the right side of the navigation bar. When clicked, it opens the GitHub repository of the project in a new tab.
+- **Title**: A bold, attention-grabbing title that highlights the app's functionality of summarizing articles using OpenAI GPT-4.
+- **Description**: A brief sentence that explains the app, "Summize," and its ability to turn lengthy articles into concise summaries.
+
+
+### `Summary` Component
 
 This is the main component of the application. It handles:
 
@@ -113,14 +123,15 @@ const handleSubmit = async (e) => {
 │   ├── App.jsx         # Main App component
 │   └── main.jsx        # Entry point for React
 ├── .env                # Environment variables
-├── .gitignore          #
-├── eslint.config.js    #
-├── index.html          #
-├── package-lock.json   #
+├── .gitignore          # Excludes files from Git tracking
+├── eslint.config.js    # Configures JavaScript linting rules
+├── index.html          # Main HTML template for the app
+├── MIT license.txt     # Permissive license allowing free use and modification.
+├── package-lock.json   # Locks exact dependency versions
 ├── package.json        # Project dependencies and scripts
-├── postcss.config.js   #
-├── README.md           #
-├── tailwind.config.js  #
+├── postcss.config.js   # Configures PostCSS processing options
+├── README.md           # Project documentation and usage guide
+├── tailwind.config.js  # Tailwind CSS customization settings
 └── vite.config.js      # Vite configuration file
 ```
 
